@@ -48,8 +48,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)textView:(YYTextView *)textView didLongPressHighlight:(YYTextHighlight *)highlight inRange:(NSRange)characterRange rect:(CGRect)rect;
 @end
 
+// #define YY_TARGET_INTERFACE_BUILDER TARGET_INTERFACE_BUILDER
+#define YY_TARGET_INTERFACE_BUILDER 0
 
-#if !TARGET_INTERFACE_BUILDER
+#if !YY_TARGET_INTERFACE_BUILDER
 
 /**
  The YYTextView class implements the behavior for a scrollable, multiline text region.
